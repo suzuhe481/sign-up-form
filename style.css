@@ -1,0 +1,70 @@
+/* Mobile styling */
+#header-container {
+  position: relative;
+}
+
+#header-image {
+  width       : 100%;
+  height      : 200px;
+  object-fit  : cover;
+}
+
+#header-text-and-logo-container {
+  font-size : 34pt;
+  color     : rgb(182, 182, 182);
+
+  position  : absolute;
+  top       : 50%;
+  left      : 50%;
+  transform : translate(-50%, -50%);
+}
+
+#image-credits {
+  font-size       : 9pt;
+  color           : white;
+  text-decoration : none;
+
+  position  : absolute;
+  top       : 8px;
+  left      : 16px;
+}
+
+#header-text {
+  vertical-align: middle;
+}
+
+
+#header-logo {
+  float: left;
+  height: 65px;
+  width: auto; 
+}
+
+
+/* Desktop styling */
+@media only screen and (min-width: 500px) {
+  #header-container {
+    position: relative;
+  }
+  
+  #header-image{
+    width   : 34%;
+    height  : 800px;
+  }
+
+  #image-header-text {
+    top       : 50%;
+    left      : 17%; /* Half of img width */
+  }
+
+  #header-text-and-logo-container {
+    font-size : 34pt;
+    color     : rgb(182, 182, 182);
+  
+    /* position  : absolute; */
+    /* top       : 50%; */
+    left      : 17%;
+    /* transform : translate(-50%, -50%); */
+  }
+  
+}
