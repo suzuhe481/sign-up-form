@@ -1,6 +1,121 @@
-/* Mobile styling */
+@font-face {
+  font-family: "Norse-Bold";
+  src: url("/fonts/Norse-Bold.otf") format("opentype")
+}
+
+/* For testing purposes */
+* {
+  /* border: 1px solid orange; */
+  /* background-color: blue; */
+}
+
+body {
+  margin: 0;
+}
+
+/* Mobile Styling */
+.flex-container {
+  display         : flex;
+  flex-direction  : column;
+}
+
+#header {
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  width           : 100vw;
+  height          : 200px;
+
+  background-image    : url(/images/space-header-image.jpg);
+  background-repeat   : no-repeat;
+  background-position : center;
+  background-size     : 100%;
+}
+
+#header-logo-and-text {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  width           : 100%;
+  height: 20%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#header-logo {
+  height  : 100%;
+  /* width   : 50px; */
+}
+
+#header-text {
+  font-family: "Norse-Bold";
+  font-size : 250%;
+  color     : rgb(182, 182, 182);
+}
+
+#image-credits {
+  font-size       : 2vw;
+  color           : white;
+  text-decoration : none;
+
+  position  : relative;
+  bottom       : -65px;
+  /* left      : 16px; */
+}
+
+#form-layout {
+  height            : 100vh;
+  background-color  : green; /* For testing purposes */
+}
+
+
+/* Desktop Styling */
+@media only screen and (min-width: 700px) {
+  .flex-container {
+    flex-direction: row;
+  }
+
+  #header {
+    /* display         : flex; */
+    /* align-items     : center; */
+    /* justify-content : center; */
+    width   : 60%;
+    height  : 100vh;
+
+    background-size     : 100vh;
+  }
+
+  #header-logo {
+    height  : 50%;
+    /* width   : auto; */
+  }
+
+  #image-credits {
+    font-size    : 2vh;
+  
+    position     : absolute;
+    bottom       : 5px;
+    /* left      : 16px; */
+  }
+
+  #form-layout {
+    /* height  : 100vh; */
+    width   : 100vw;
+  }
+}
+
+
+
+/* Mobile styling
+
+#flex-container {
+  display: flex;
+}
+
 #header-container {
   position: relative;
+  flex: 1;
 }
 
 #header-image {
@@ -20,7 +135,7 @@
 }
 
 #image-credits {
-  font-size       : 9pt;
+  font-size       : 1.2vmax;
   color           : white;
   text-decoration : none;
 
@@ -40,9 +155,17 @@
   width: auto; 
 }
 
+#form-container {
+  flex: 1;
+  position: relative;
+  background-color: orange;
+  height: 200px;
+  width: 200px;
+}
+
 
 /* Desktop styling */
-@media only screen and (min-width: 500px) {
+/* @media only screen and (min-width: 500px) {
   #header-container {
     position: relative;
   }
@@ -52,19 +175,19 @@
     height  : 800px;
   }
 
-  #image-header-text {
-    top       : 50%;
-    left      : 17%; /* Half of img width */
-  }
-
   #header-text-and-logo-container {
     font-size : 34pt;
     color     : rgb(182, 182, 182);
   
-    /* position  : absolute; */
-    /* top       : 50%; */
-    left      : 17%;
-    /* transform : translate(-50%, -50%); */
+    left      : 17%; /* Half of #header-image width to center*/
+  /* }
+
+  #image-credits {
+    font-size       : 1.2vmin;
+  }
+
+  #form-container {
+    float: right;
   }
   
-}
+} */ 
