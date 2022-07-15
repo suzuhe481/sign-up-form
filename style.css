@@ -11,8 +11,8 @@
 
 
 body {
-  margin: 0;
-  font-family: Arial;
+  margin      : 0;
+  font-family : Arial;
 }
 
 /* Mobile Styling */
@@ -40,7 +40,7 @@ body {
   align-items     : center;
   justify-content : center;
   width           : 100%;
-  height: 20%;
+  height          : 20%;
 
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -50,9 +50,9 @@ body {
 }
 
 #header-text {
-  font-family: "Norse-Bold";
-  font-size : 250%;
-  color     : rgb(182, 182, 182);
+  font-family : "Norse-Bold";
+  font-size   : 250%;
+  color       : rgb(182, 182, 182);
 }
 
 #image-credits {
@@ -60,53 +60,87 @@ body {
   color           : white;
   text-decoration : none;
 
-  position  : relative;
-  bottom       : -65px;
-  /* left      : 16px; */
+  position        : relative;
+  bottom          : -65px;
 }
 
 #form-layout {
-  display: flex;
-  flex-direction: column;
-  height            : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  height          : 100vh;
 }
 
 #form-header {
   display         : flex;
   flex-direction  : column;
+  flex-shrink     : 0;
   justify-content : flex-end;
+  margin          : 10px;
 
   background-color: rgb(250, 250, 250);
-
-  /* padding : 0px 50px 5px 20px; /* Top left/right bottom */
-  /* padding-top: 0px; */
-  padding-right: 50px;
-  /* padding-bottom: 5px; */
-  padding-left: 20px;
-  /* padding-top: 50px; */
-  /* bottom: 10px; */
-  /* background-color: blue; */
 }
 
 #form-header-text-container p {
   font-size   : 3vw;
   font-weight : bold;
+  text-align  : center;
+  color       : rgb(83,106,114)
 }
 
 #form-container {
-  height: 200px;
-  box-shadow: 1px 1px 2px rgba(102, 102, 102, 0.459);
+  flex-shrink : 0;
+  box-shadow  : 1px 1px 2px rgba(102, 102, 102, 0.459);
+}
+
+#form-container p {
+  color       : rgb(83,106,114);
+  font-weight : bold;
+
+  margin-left : 20px;
+}
+
+.form-row {
+  display         : flex;
+  flex-direction  : column;
+  padding         : 10px 0px;
+  padding-left    : 20px;
+
+  font-size : 12px;
+  color     : rgb(83,106,114);
+}
+
+.form-row input {
+  width : 50%;
 }
 
 #form-footer {
-  height: 200px;
+  flex-shrink : 0;
+  height      : 200px;
+}
+
+#form-footer button {
+  padding       : 5px 20px;
+  margin        : 20px;
+  border-radius : 7px;
+
+  background-color  : rgb(83,106,114);
+  color             : white;
+}
+
+#form-footer p {
+  color         : rgb(83,106,114);
+  margin-left   : 20px;
+}
+
+#form-footer a {
+  text-decoration : none;
 }
 
 
 /* Desktop Styling */
 @media only screen and (min-width: 700px) {
   .flex-container {
-    flex-direction: row;
+    flex-direction  : row;
   }
 
   #header {
@@ -129,26 +163,41 @@ body {
 
   #form-layout {
     width   : 100vw;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
   }
 
   #form-header {
-    height: calc(100vh / 3);
-    background-color: rgb(250, 250, 250);
-    padding-right: max(100px, 10vw);
-    margin-bottom: 10px;
+    height      : calc(100vh / 3); /* Each section divided into 3 parts */
+    margin-left : 20px;
+
+    background-color  : rgb(250, 250, 250);
   }
 
-  #form-header-text-container p{
-    font-size: 12pt;
+  #form-header-text-container p {
+    font-size   : 12pt;
+    text-align  : left;
   }
   
   #form-container {
-    height: 200px;
+    height        : calc(100vh / 3); /* Each section divided into 3 parts */
+    margin-left   : 20px;
+    padding       : 0;
+  }
+
+  #form-container p {
+    margin-left : 0px;
+  }
+
+  .form-row {
+    float   : left;
+    padding : 3px;
+  }
+
+  .form-row input {
+    width : calc(100vw / 4);
   }
   
   #form-footer {
-    height: calc(100vh / 3);
+    height: calc(100vh / 3); /* Each section divided into 3 parts */
   }
 }
